@@ -1,12 +1,26 @@
 import Link from "next/link";
+import Image from "next/image";
+import NavBar from "@/components/NavBar";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div className="w-dvw h-dvh flex justify-center items-center text-white">
-      <div className="flex flex-col gap-2 items-center">
-          <h1 className="font-bold text-3xl">Something is cooking!</h1>
-          <h1>This domain is owned by @ShibamMitra</h1>
-          <Link href={"https://www.linkedin.com/in/shibammitra/"} className="bg-white text-black px-2 font-semibold hover:bg-black hover:border transition hover:text-white rounded-md">Linkedin</Link>
+    <div className="sm:p-3 p-4 flex justify-center">
+      <div className="w-[1104px] space-y-2">
+        <NavBar />
+        <Hero />
+        <div className="grid sm:grid-cols-1">
+          <div className="bg-slate-500">Skills carousel</div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-2">
+          <div className="bg-blue-500 ">Project 1</div>
+          <div className="bg-green-500 ">Project 2</div>
+        </div>
+
+        <div className="grid sm:grid-cols-1">
+          <div className="bg-orange-500">Contact section</div>
+        </div>
       </div>
     </div>
   );

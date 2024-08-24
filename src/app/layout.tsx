@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import LenisScroll from "@/components/LenisScroll";
 
 const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Shibam Mitra | Portfolio",
@@ -16,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-zinc-950 ${inter.className}`}>{children}</body>
+      <body className={openSans.className}>
+        <LenisScroll />
+        {children}
+      </body>
     </html>
   );
 }
