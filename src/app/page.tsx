@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
+import SkillsSection from "@/components/SkillsSection";
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
       <div className="w-[1104px] space-y-2">
         <NavBar />
         <Hero />
-        <div className="grid sm:grid-cols-1">
-          <div className="bg-slate-500">Skills carousel</div>
-        </div>
+        <SkillsSection />
 
         <div className="grid sm:grid-cols-2 gap-2">
           <div className="bg-blue-500 ">Project 1</div>

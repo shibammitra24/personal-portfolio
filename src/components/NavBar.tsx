@@ -1,21 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" },
+  ];
+
+  const pathname = usePathname();
+
   return (
     <>
       <nav className="flex justify-between">
@@ -27,7 +27,7 @@ export default function NavBar() {
         />
         <div className="flex items-center">
           <div className="flex gap-6">
-            <Link href={"#"} className="hidden sm:flex">
+            {/* <Link href={"#"} className="hidden sm:flex">
               Home
             </Link>
             <Link href={"#"} className="hidden sm:flex">
@@ -35,7 +35,23 @@ export default function NavBar() {
             </Link>
             <Link href={"#"} className="hidden sm:flex">
               Contact
-            </Link>
+            </Link> */}
+
+            {navLinks.map((links) => {
+              const isActive = pathname.startsWith(links.href);
+              return (
+                <div
+                  key={links.name}
+                  className={
+                    isActive
+                      ? "font-bold hidden sm:flex"
+                      : "text-zinc-800 hidden sm:flex"
+                  }
+                >
+                  <Link href={`${links.href}`}>{links.name}</Link>
+                </div>
+              );
+            })}
           </div>
 
           <div className="sm:hidden flex z-50 items-center">
