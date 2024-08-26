@@ -44,7 +44,7 @@ export default function NavBar() {
                   key={links.name}
                   className={
                     isActive
-                      ? "font-bold hidden sm:flex"
+                      ? "font-semibold hidden sm:flex"
                       : "text-zinc-800 hidden sm:flex"
                   }
                 >

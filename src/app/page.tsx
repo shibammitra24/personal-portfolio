@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import SkillsSection from "@/components/SkillsSection";
+import ProjectOne from "@/components/ProjectOne";
 
 export default function Home() {
   return (
@@ -11,12 +12,7 @@ export default function Home() {
         <NavBar />
         <Hero />
         <SkillsSection />
-
-        <div className="grid sm:grid-cols-2 gap-2">
-          <div className="bg-blue-500 ">Project 1</div>
-          <div className="bg-green-500 ">Project 2</div>
-        </div>
-
+        <ProjectOne />
         <div className="grid sm:grid-cols-1">
           <div className="bg-orange-500">Contact section</div>
         </div>

@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import BlurIn from "@/components/magicui/blur-in";
+import { motion } from "framer-motion";
 
 const techLogos = [
   "/carousel/html_logo.svg", // replace these paths with your image paths
@@ -14,51 +16,66 @@ const techLogos = [
 ];
 
 export default function SkillsSection() {
+  const bounceAnimationVariants: any = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { opacity: 1, scale: 1 },
+  };
   return (
     <div className="grid sm:grid-cols-1 bg-gradient-to-l from-zinc-100 to-zinc-50 border rounded-md p-2">
-      <div className="flex flex-col justify-center items-center">
-        {/* <h1 className="sm:text-3xl text-2xl font-bold ">My Tech Stack</h1> */}
-        <BlurIn
-          word="My Tech Stack"
-          duration={0.5}
-          className="sm:text-3xl text-2xl font-bold"
-        />
-        <div className="sm:flex grid grid-rows-3 grid-cols-3 sm:gap-10 gap-x-12 gap-y-4 pt-4 pb-1">
-          {techLogos.slice(0, 3).map((src, index) => (
-            <div key={`${index}`} className="row-span-1">
-              <Image
-                src={src}
-                alt={`image-${index}`}
-                height={60}
-                width={60}
-                className="transition-transform duration-300 ease-in-out hover:scale-105"
-              />
-            </div>
-          ))}
-          {techLogos.slice(3, 6).map((src, index) => (
-            <div key={`${index}`} className="row-span-1">
-              <Image
-                src={src}
-                alt={`image-${index}`}
-                height={60}
-                width={60}
-                className="transition-transform duration-300 ease-in-out hover:scale-105"
-              />
-            </div>
-          ))}
-          {techLogos.slice(6, 9).map((src, index) => (
-            <div key={`${index}`} className="row-span-1">
-              <Image
-                src={src}
-                alt={`image-${index}`}
-                height={60}
-                width={60}
-                className="transition-transform duration-300 ease-in-out hover:scale-105"
-              />
-            </div>
-          ))}
+      <motion.div
+        variants={bounceAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        transition={{
+          duration: 0.5,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
+        <div className="flex flex-col justify-center items-center">
+          {/* <h1 className="sm:text-3xl text-2xl font-bold ">My Tech Stack</h1> */}
+          <BlurIn
+            word="My Tech Stack"
+            duration={1}
+            className="sm:text-3xl text-2xl font-bold"
+          />
+          <div className="sm:flex grid grid-rows-3 grid-cols-3 sm:gap-10 gap-x-12 gap-y-4 pt-4 pb-1">
+            {techLogos.slice(0, 3).map((src, index) => (
+              <div key={`${index}`} className="row-span-1">
+                <Image
+                  src={src}
+                  alt={`image-${index}`}
+                  height={60}
+                  width={60}
+                  className="transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </div>
+            ))}
+            {techLogos.slice(3, 6).map((src, index) => (
+              <div key={`${index}`} className="row-span-1">
+                <Image
+                  src={src}
+                  alt={`image-${index}`}
+                  height={60}
+                  width={60}
+                  className="transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </div>
+            ))}
+            {techLogos.slice(6, 9).map((src, index) => (
+              <div key={`${index}`} className="row-span-1">
+                <Image
+                  src={src}
+                  alt={`image-${index}`}
+                  height={60}
+                  width={60}
+                  className="transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

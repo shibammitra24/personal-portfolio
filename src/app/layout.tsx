@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Open_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import LenisScroll from "@/components/LenisScroll";
 
 const inter = Inter({ subsets: ["latin"] });
+// const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -22,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={openSans.className}>
+      <body className={`${openSans.className} select-none`}>
         <LenisScroll />
         {children}
       </body>
