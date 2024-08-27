@@ -39,40 +39,47 @@ export default function Hero() {
                   Hello, I&#39;m Shibam, a<FlipWords words={words} /> <br />{" "}
                   from India.
                 </h2>
-                <p className="sm:mt-10 mt-10 sm:text-lg text-sm">
+                {/* <p className="sm:mt-10 mt-10 sm:text-lg text-sm">
                   I can make your web designs that care about your users and
                   make them real with my development skills.
+                </p> */}
+                <p className="sm:mt-10 mt-10 sm:text-lg text-sm">
+                  Your go-to partner for designing intuitive interfaces and
+                  developing high-performance websites that stand out in the
+                  digital landscape.
                 </p>
               </div>
 
               {/* CTA and Social Buttons */}
               <div className="sm:flex justify-between w-full items-center">
-                <HoverBorderGradient
-                  containerClassName="rounded-full sm:w-auto sm:mb-0 mb-2 w-full"
-                  as="button"
-                  className="dark:bg-black bg-black text-white dark:text-white  items-center px-5 py-3 space-x-2 font-medium"
-                >
-                  <span className="sm:p-4">Contact me</span>
-                </HoverBorderGradient>
+                <Link href={"mailto:shibammitra695@gmail.com"}>
+                  <HoverBorderGradient
+                    containerClassName="rounded-full sm:w-auto sm:mb-0 mb-3 w-full"
+                    as="button"
+                    className="dark:bg-black bg-black text-white dark:text-white  items-center px-5 py-3 space-x-2 font-medium"
+                  >
+                    <span className="sm:p-4">Contact me</span>
+                  </HoverBorderGradient>
+                </Link>
 
                 <div className="flex gap-3 justify-around sm:justify-between">
                   <Link href={"https://www.instagram.com/shibam.mitra_/"}>
-                    <div className="cursor-pointer bg-white hover:bg-gradient-to-r hover:from-pink-500 hover:via-purple-500 hover:to-yellow-500 hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-gradient-to-r hover:from-pink-500 hover:via-purple-500 hover:to-yellow-500 hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Instagram className="sm:size-auto size-8" />
                     </div>
                   </Link>
                   <Link href={"https://www.linkedin.com/in/shibammitra/"}>
-                    <div className="cursor-pointer bg-white hover:bg-[#0077B5] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-[#0077B5] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Linkedin className="sm:size-auto size-8" />
                     </div>
                   </Link>
                   <Link href={"https://x.com/ShibamMitra12"}>
-                    <div className="cursor-pointer bg-white hover:bg-[#1DA1F2] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-[#1DA1F2] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Twitter className="sm:size-auto size-8" />
                     </div>
                   </Link>
                   <Link href={"https://github.com/shibammitra24"}>
-                    <div className="cursor-pointer bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-black hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Github className="sm:size-auto size-8" />
                     </div>
                   </Link>

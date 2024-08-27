@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ProjectOne() {
   const bounceAnimationVariants: any = {
@@ -10,7 +11,7 @@ export default function ProjectOne() {
   };
 
   return (
-    <div className="grid sm:grid-cols-2 gap-2 sm:h-[511px] h-[600px]">
+    <div id="projects" className="grid sm:grid-cols-2 gap-2 h-max">
       <div className="relative inline-block">
         <motion.div
           variants={bounceAnimationVariants}
@@ -27,11 +28,13 @@ export default function ProjectOne() {
             height={900}
             width={900}
             alt="project 1"
-            className="sm:h-auto sm:w-auto object-cover"
+            className="sm:h-auto sm:w-auto object-cover rounded-lg"
           />
-          <div className="absolute cursor-pointer top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
-            <ArrowUpRight />
-          </div>
+          <Link href={"https://github.com/shibammitra24/NextWeatherApp"}>
+            <div className="absolute cursor-pointer top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
+              <ArrowUpRight />
+            </div>
+          </Link>
         </motion.div>
       </div>
 
@@ -46,6 +49,7 @@ export default function ProjectOne() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
+          {/* TODO: Change spelling of "institute" */}
           <Image
             src={"/projects/proj_2.webp"}
             height={900}
@@ -53,9 +57,11 @@ export default function ProjectOne() {
             alt="project 1"
             className="sm:h-auto sm:w-auto object-cover "
           />
-          <div className="absolute cursor-pointer top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
-            <ArrowUpRight />
-          </div>
+          <Link href={"https://github.com/shibammitra24/online-exam-panel"}>
+            <div className="absolute cursor-pointer top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
+              <ArrowUpRight />
+            </div>
+          </Link>
         </motion.div>
       </div>
     </div>

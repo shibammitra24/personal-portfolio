@@ -1,9 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectOne from "@/components/ProjectOne";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,9 +12,7 @@ export default function Home() {
         <Hero />
         <SkillsSection />
         <ProjectOne />
-        <div className="grid sm:grid-cols-1">
-          <div className="bg-orange-500">Contact section</div>
-        </div>
+        <Footer />
       </div>
     </div>
   );
