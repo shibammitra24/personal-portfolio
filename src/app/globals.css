@@ -71,3 +71,18 @@
 img {
   pointer-events: none;
 }
+
+/* Hide the default cursor globally */
+body,
+a,
+button,
+Link {
+  cursor: none;
+}
+
+/* Hide the custom cursor on mobile devices */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+}
