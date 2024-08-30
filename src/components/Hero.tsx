@@ -52,7 +52,7 @@ export default function Hero() {
 
               {/* CTA and Social Buttons */}
               <div className="sm:flex justify-between w-full items-center">
-                <Link href={"mailto:shibammitra695@gmail.com"}>
+                <Link href={"/contact"}>
                   <HoverBorderGradient
                     containerClassName="rounded-full sm:w-auto sm:mb-0 mb-3 w-full"
                     as="button"
@@ -64,22 +64,22 @@ export default function Hero() {
 
                 <div className="flex gap-3 justify-around sm:justify-between">
                   <Link href={"https://www.instagram.com/shibam.mitra_/"}>
-                    <div className="cursor-none bg-white/70 hover:bg-gradient-to-r hover:from-pink-500 hover:via-purple-500 hover:to-yellow-500 hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-gradient-to-r hover:from-pink-500 hover:via-purple-500 hover:to-yellow-500 hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Instagram className="sm:size-auto size-8" />
                     </div>
                   </Link>
                   <Link href={"https://www.linkedin.com/in/shibammitra/"}>
-                    <div className="cursor-none bg-white/70 hover:bg-[#0077B5] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-[#0077B5] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Linkedin className="sm:size-auto size-8" />
                     </div>
                   </Link>
                   <Link href={"https://x.com/ShibamMitra12"}>
-                    <div className="cursor-none bg-white/70 hover:bg-[#1DA1F2] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-[#1DA1F2] hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Twitter className="sm:size-auto size-8" />
                     </div>
                   </Link>
                   <Link href={"https://github.com/shibammitra24"}>
-                    <div className="cursor-none bg-white/70 hover:bg-black hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
+                    <div className="cursor-pointer bg-white/70 hover:bg-black hover:text-white transition ease-in-out rounded-full sm:p-3 p-2">
                       <Github className="sm:size-auto size-8" />
                     </div>
                   </Link>

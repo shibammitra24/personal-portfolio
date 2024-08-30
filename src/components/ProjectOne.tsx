@@ -31,7 +31,7 @@ export default function ProjectOne() {
             className="sm:h-auto sm:w-auto object-cover rounded-lg"
           />
           <Link href={"https://github.com/shibammitra24/NextWeatherApp"}>
-            <div className="absolute cursor-none top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
+            <div className="absolute cursor-pointer top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
               <ArrowUpRight />
             </div>
           </Link>
@@ -58,7 +58,7 @@ export default function ProjectOne() {
             className="sm:h-auto sm:w-auto object-cover "
           />
           <Link href={"https://github.com/shibammitra24/online-exam-panel"}>
-            <div className="absolute cursor-none top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
+            <div className="absolute cursor-pointer top-2 right-2 bg-white hover:bg-black hover:text-white transition ease-in-out rounded-full sm:m-4 m-2 sm:p-3 p-2">
               <ArrowUpRight />
             </div>
           </Link>

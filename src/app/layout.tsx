@@ -4,7 +4,6 @@ import { Open_Sans } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import LenisScroll from "@/components/LenisScroll";
-import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 // const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
@@ -28,7 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.className} select-none`}>
         <LenisScroll />
-        <CustomCursor />
         {children}
       </body>
     </html>
